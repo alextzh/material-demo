@@ -1,0 +1,33 @@
+.row{
+  margin-top:10px;
+  margin-bottom: 50px;
+}
+.side-nav{
+  width:auto;
+  top:20px;
+}
+.fixed-action-btn {
+  display: none;
+}
+.side-nav .collapsible-header, .side-nav.fixed .collapsible-header {
+  padding: 0 32px;
+}
+.side-nav .collapsible-body li a, .side-nav.fixed .collapsible-body li a {
+  padding: 0 0 0 50px;
+}
+#extend{
+  float: right;
+  margin:0;
+}
+@media only screen and (max-width: 992px){
+  #floatBtn{
+    display: block;
+  }
+}
+@media only screen and (max-width: 601px){
+  .side-nav{
+    top:0;
+  }
+}
+
+

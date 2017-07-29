@@ -1,0 +1,60 @@
+
+.fixed-logo{
+  position:fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  margin-bottom:0;
+}
+.user-logo{
+  padding:10px 30px;
+}
+.user-logo a{display:block;}
+.user-logo img{
+  height:65px;
+  vertical-align: middle;
+  margin-top:6px;
+}
+
+.flexbox-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:0;
+  min-height:100vh;
+  text-align: center;
+}
+.flexbox-item {
+  width:100%;
+  max-width:600px;
+}
+.edge{
+  padding:0 10% !important;
+}
+.edge h4{
+  font-weight: 600;
+  font-family: "Microsoft JhengHei Light";
+}
+.pl3{padding-left:3rem;}
+.pl3t2{padding-left:3rem;padding-top:2rem;}
+.mt5{margin-top:5px;}
+.login-btn{
+  width:100%;
+  font-size:1.4rem;
+  font-family: "Microsoft JhengHei";
+}
+.register-btn{
+  font-size:1.4rem;
+  font-family: "Microsoft JhengHei";
+}
+.mobile-code{
+  position: absolute;
+  right:0;
+  top:0;
+}

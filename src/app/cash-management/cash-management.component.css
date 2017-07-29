@@ -1,0 +1,18 @@
+
+.card .card-content .card-title{
+  font-family: "Microsoft JhengHei";
+  font-weight: 600;
+  border-left:3px solid #ee6e73;
+  padding-left:15px;
+  margin-bottom:20px;
+}
+
+#manageBtn{
+  font-size:1.4rem;
+  font-family: "Microsoft JhengHei";
+}
+@media only screen and (max-width: 601px){
+  .card .card-content p.trans-point{
+    margin-bottom:20px;
+  }
+}

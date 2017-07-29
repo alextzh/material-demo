@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <div class="v-title">项目阶段收益</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <table class="responsive-table highlight bordered centered">
+          <thead>
+          <tr>
+            <th>项目名称</th>
+            <th>结算日期</th>
+            <th>结算日市值(元)</th>
+            <th>投资人收益率(%)</th>
+            <th>操盘手收益率(%)</th>
+            <th>赎回情况</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let list of pagedLists">
+            <td>{{list.loanName}}</td>
+            <td>{{list.repayDate}}</td>
+            <td>{{list.stockAmt}}</td>
+            <td>{{list.investRate}}</td>
+            <td>{{list.opeRate}}</td>
+            <td>{{list.bankInfo}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+
+

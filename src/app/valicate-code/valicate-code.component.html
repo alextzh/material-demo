@@ -1,0 +1,10 @@
+<div class="input-field">
+  <i class="material-icons prefix">wallpaper</i>
+  <input placeholder="请输入图片验证码" [formControl]="codeFilter" maxlength="4" id="confirmCode" type="text" class="validate">
+  <label for="confirmCode" class="active">验证码</label>
+  <div id="v_container">
+    <canvas id="codeCanvas" (click)="refreshCode()" width="150" height="40"></canvas>
+  </div>
+  <div class="v-error" [hidden]="isRight">验证码不匹配</div>
+</div>
+

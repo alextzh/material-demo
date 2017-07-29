@@ -1,0 +1,12 @@
+.pagination-box{
+  text-align: center;
+}
+.active{
+  background: red;
+  color: #fff;
+}
+select.browser-default{
+  display:inline-block;
+  width:auto;
+  height:auto;
+}

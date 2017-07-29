@@ -1,0 +1,23 @@
+<div class="pagination-box">
+  <ul class="pagination" *ngIf="alwaysShow ? true : (pageLinks && pageLinks.length > 1)">
+    <li class="waves-effect" [class]="isFirstPage() ? 'disabled' : ''">
+      <a href="#!" (click)="changePageToFirst($event)"><i class="material-icons">first_page</i></a>
+    </li>
+    <li class="waves-effect" [class]="isFirstPage() ? 'disabled' : ''">
+      <a href="#!" (click)="changePageToPrev($event)"><i class="material-icons">chevron_left</i></a>
+    </li>
+    <li *ngFor="let pageLink of pageLinks" class="waves-effect" [class]="(pageLink-1 == getPage()) ? 'active' : ''">
+      <a href="#!" (click)="changePage(pageLink - 1, $event)">{{pageLink}}</a>
+    </li>
+    <li class="waves-effect" [class]="isLastPage() ? 'disabled' :''">
+      <a href="#!" (click)="changePageToNext($event)"><i class="material-icons">chevron_right</i></a>
+    </li>
+    <li class="waves-effect" [class]="isLastPage() ? 'disabled' :''">
+      <a href="#!" (click)="changePageToLast($event)"><i class="material-icons">last_page</i></a>
+    </li>
+    <select class="browser-default" *ngIf="rowsPerPageOptions" (change)="onRppChange($event)">
+      <option *ngFor="let opt of rowsPerPageOptions" [value]="opt" [selected]="rows == opt">{{opt}}</option>
+    </select>
+  </ul>
+</div>
+

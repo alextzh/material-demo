@@ -1,0 +1,79 @@
+
+.brand-logo{
+  height: 65px;
+  padding:6px 0;
+}
+.brand-logo img{
+  max-height:100%;
+}
+.v-login,.v-register{
+  margin:0 10px;
+}
+.v-message{
+  padding:10px;
+}
+.v-message a{
+  border:none;
+  text-align: center;
+  padding:0;
+  margin:0;
+  height:40px;
+  line-height: 40px;
+}
+.logo-box{
+  display: block;
+  padding: 20px;
+  text-align: center;
+  height: auto;
+  background: #ee6e73;
+}
+.logo-box img{
+  display: inline-block;
+  max-width: 200px;
+  vertical-align: middle;
+}
+.side-nav li > a.logo-box:hover {
+  background-color: rgba(238, 110, 115, 0.6);
+}
+#v-cart{
+  display: block;
+  position: relative;
+  padding:0 10px;
+  height:64px;
+  line-height: 64px;
+  display: none;
+}
+#v-cart>i{
+  line-height: 64px;
+}
+#v-cart>.v-cart{
+  position: absolute;
+  top:12px;
+  right:0;
+  padding: 0 7px;
+  height: 20px;
+  background: rgba(255,0,0,.6);
+  border-radius: 100%;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  font-size: 12px;
+}
+#v-cart.v-show{
+   display:block;
+}
+@media only screen and (max-width: 601px){
+  #v-cart{
+    height:56px;
+    line-height: 56px;
+  }
+  #v-cart>i{
+    line-height: 56px;
+  }
+  #v-cart>.v-cart{
+    top:8px;
+  }
+  .brand-logo{
+    height: 56px;
+  }
+}

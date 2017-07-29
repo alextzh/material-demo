@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <div class="v-title">填写充值信息</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">
+          <p class="v-font">账户余额(元)：<span>9999999</span></p>
+        </div>
+        <div class="row">
+          <p class="input-field col s6 m3 l3">
+            <input class="with-gap" name="rechargeType" (click)="oldType()" checked type="radio" id="oldCard"  />
+            <label for="oldCard">老卡</label>
+          </p>
+          <p class="input-field col s6 m3 l3">
+            <input class="with-gap" name="rechargeType" (click)="newType()" type="radio" id="newCard"  />
+            <label for="newCard">新卡</label>
+          </p>
+        </div>
+        <div class="row mb0">
+          <div class="col s12 p0">
+            <div class="input-field">
+              <input id="rechargeAmt" type="number" placeholder="请输入充值金额" class="validate">
+              <label for="rechargeAmt" class="active">充值金额</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb0" [hidden]="isChecked">
+          <div class="col s12 p0">
+            <div class="input-field">
+              <input id="bankName" type="text" placeholder="请输入银行卡名称" class="validate">
+              <label for="bankName" class="active">银行卡名称</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb0" [hidden]="!isChecked">
+          <div class="col s12 p0">
+            <div class="input-field">
+              <select>
+                <option value="" disabled selected>请选择银行卡</option>
+                <option value="1">中国建设银行</option>
+                <option value="2">中国工商银行</option>
+                <option value="3">北京银行</option>
+              </select>
+              <label>银行卡名称</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb0">
+          <div class="col s12 p0">
+           <div class="input-field">
+              <input id="bankNo" type="number" placeholder="请输入银行卡号" class="validate">
+              <label for="bankNo" class="active"> 银行卡号</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb0">
+          <div class="col s12 p0">
+            <div class="input-field">
+              <input id="bankHolder" type="text" placeholder="请输入卡主姓名" class="validate">
+              <label for="bankHolder" class="active">卡主姓名</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m4 offset-m4">
+            <a href="javascript:void (0);" class="waves-effect waves-light btn-large recharge-btn">提交充值信息</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

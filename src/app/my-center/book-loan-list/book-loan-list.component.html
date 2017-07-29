@@ -1,0 +1,227 @@
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <div class="v-title">预约列表</div>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom:0;">
+      <div class="col s12" style="padding:0;">
+        <ul class="tabs tabs-fixed-width z-depth-1" id="bookloanTabs">
+          <li class="tab"><a class="active" href="#test1" (click)="getBookLoanList()">全部状态</a></li>
+          <li class="tab"><a href="#test2" (click)="getBookLoanList('booking')">预约申请中</a></li>
+          <li class="tab"><a href="#test3" (click)="getBookLoanList('booking_success')">预约成功</a></li>
+          <li class="tab"><a href="#test4" (click)="getBookLoanList('booking_failed')">预约失败</a></li>
+          <li class="tab"><a href="#test5" (click)="getBookLoanList('booking_completed')">返还本金</a></li>
+          <li class="tab"><a href="#test6" (click)="getBookLoanList('apply_repay')">申请赎回</a></li>
+          <li class="tab"><a href="#test7" (click)="getBookLoanList('part_booking_repay')">停牌份额</a></li>
+          <li class="tab"><a href="#test8" (click)="getBookLoanList('transfering')">转让中</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div id="test1">
+          <table class="bordered centered highlight responsive-table">
+            <thead>
+            <tr>
+              <th>时间</th>
+              <th>预约状态</th>
+              <th>预约金额</th>
+              <th>返还本金</th>
+              <th>摘要</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let list of pagedLists">
+              <td>{{list.bookTime}}</td>
+              <td>{{list.bookState}}</td>
+              <td>{{list.bookPrice}}</td>
+              <td>{{list.bookRepay}}</td>
+              <td>{{list.bookAbstract}}</td>
+              <td><p *ngFor="let handle of list.handles" class="handle-s"><a href="javascript:void (0);" class="waves-effect waves-light btn" (click)="eventTrigger(list.bookId,handle.name)">{{handle.name}}</a></p></td>
+            </tr>
+            </tbody>
+          </table>
+          <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+        </div>
+        <div id="test2">
+          <table class="bordered centered highlight responsive-table">
+            <thead>
+            <tr>
+              <th>时间</th>
+              <th>预约状态</th>
+              <th>预约金额</th>
+              <th>返还本金</th>
+              <th>摘要</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let list of pagedLists">
+              <td>{{list.bookTime}}</td>
+              <td>{{list.bookState}}</td>
+              <td>{{list.bookPrice}}</td>
+              <td>{{list.bookRepay}}</td>
+              <td>{{list.bookAbstract}}</td>
+              <td><p *ngFor="let handle of list.handles" class="handle-s"><a href="javascript:void (0);" class="waves-effect waves-light btn" (click)="eventTrigger(list.bookId,handle.name)">{{handle.name}}</a></p></td>
+            </tr>
+            </tbody>
+          </table>
+          <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+        </div>
+        <div id="test3">
+          <table class="bordered centered highlight responsive-table">
+            <thead>
+            <tr>
+              <th>时间</th>
+              <th>预约状态</th>
+              <th>预约金额</th>
+              <th>返还本金</th>
+              <th>摘要</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let list of pagedLists">
+              <td>{{list.bookTime}}</td>
+              <td>{{list.bookState}}</td>
+              <td>{{list.bookPrice}}</td>
+              <td>{{list.bookRepay}}</td>
+              <td>{{list.bookAbstract}}</td>
+              <td><p *ngFor="let handle of list.handles" class="handle-s"><a href="javascript:void (0);" class="waves-effect waves-light btn" (click)="eventTrigger(list.bookId,handle.name)">{{handle.name}}</a></p></td>
+            </tr>
+            </tbody>
+          </table>
+          <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+        </div>
+        <div id="test4">
+          <table class="bordered centered highlight responsive-table">
+            <thead>
+            <tr>
+              <th>时间</th>
+              <th>预约状态</th>
+              <th>预约金额</th>
+              <th>返还本金</th>
+              <th>摘要</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let list of pagedLists">
+              <td>{{list.bookTime}}</td>
+              <td>{{list.bookState}}</td>
+              <td>{{list.bookPrice}}</td>
+              <td>{{list.bookRepay}}</td>
+              <td>{{list.bookAbstract}}</td>
+              <td><p *ngFor="let handle of list.handles" class="handle-s"><a href="javascript:void (0);" class="waves-effect waves-light btn" (click)="eventTrigger(list.bookId,handle.name)">{{handle.name}}</a></p></td>
+            </tr>
+            </tbody>
+          </table>
+          <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+        </div>
+        <div id="test5">
+          <table class="bordered centered highlight responsive-table">
+            <thead>
+            <tr>
+              <th>时间</th>
+              <th>预约状态</th>
+              <th>预约金额</th>
+              <th>返还本金</th>
+              <th>摘要</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let list of pagedLists">
+              <td>{{list.bookTime}}</td>
+              <td>{{list.bookState}}</td>
+              <td>{{list.bookPrice}}</td>
+              <td>{{list.bookRepay}}</td>
+              <td>{{list.bookAbstract}}</td>
+              <td><p *ngFor="let handle of list.handles" class="handle-s"><a href="javascript:void (0);" class="waves-effect waves-light btn" (click)="eventTrigger(list.bookId,handle.name)">{{handle.name}}</a></p></td>
+            </tr>
+            </tbody>
+          </table>
+          <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+        </div>
+        <div id="test6">
+          <table class="bordered centered highlight responsive-table">
+            <thead>
+            <tr>
+              <th>时间</th>
+              <th>预约状态</th>
+              <th>预约金额</th>
+              <th>返还本金</th>
+              <th>摘要</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let list of pagedLists">
+              <td>{{list.bookTime}}</td>
+              <td>{{list.bookState}}</td>
+              <td>{{list.bookPrice}}</td>
+              <td>{{list.bookRepay}}</td>
+              <td>{{list.bookAbstract}}</td>
+              <td><p *ngFor="let handle of list.handles" class="handle-s"><a href="javascript:void (0);" class="waves-effect waves-light btn" (click)="eventTrigger(list.bookId,handle.name)">{{handle.name}}</a></p></td>
+            </tr>
+            </tbody>
+          </table>
+          <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+        </div>
+        <div id="test7">
+          <table class="bordered centered highlight responsive-table">
+            <thead>
+            <tr>
+              <th>时间</th>
+              <th>预约状态</th>
+              <th>预约金额</th>
+              <th>返还本金</th>
+              <th>摘要</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let list of pagedLists">
+              <td>{{list.bookTime}}</td>
+              <td>{{list.bookState}}</td>
+              <td>{{list.bookPrice}}</td>
+              <td>{{list.bookRepay}}</td>
+              <td>{{list.bookAbstract}}</td>
+              <td><p *ngFor="let handle of list.handles" class="handle-s"><a href="javascript:void (0);" class="waves-effect waves-light btn" (click)="eventTrigger(list.bookId,handle.name)">{{handle.name}}</a></p></td>
+            </tr>
+            </tbody>
+          </table>
+          <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+        </div>
+        <div id="test8">
+          <table class="bordered centered highlight responsive-table">
+            <thead>
+            <tr>
+              <th>时间</th>
+              <th>预约状态</th>
+              <th>预约金额</th>
+              <th>返还本金</th>
+              <th>摘要</th>
+              <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let list of pagedLists">
+              <td>{{list.bookTime}}</td>
+              <td>{{list.bookState}}</td>
+              <td>{{list.bookPrice}}</td>
+              <td>{{list.bookRepay}}</td>
+              <td>{{list.bookAbstract}}</td>
+              <td><p *ngFor="let handle of list.handles" class="handle-s"><a href="javascript:void (0);" class="waves-effect waves-light btn" (click)="eventTrigger(list.bookId,handle.name)">{{handle.name}}</a></p></td>
+            </tr>
+            </tbody>
+          </table>
+          <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

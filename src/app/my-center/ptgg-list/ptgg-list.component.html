@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <div class="v-title">平台公告</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <ul *ngFor="let list of pagedLists">
+          <li><i class="material-icons" style="margin-right:10px;font-size:0.2rem;color: #ee6e73;">brightness_1</i><a [routerLink]="['../ptggDetail',list.id]">{{list.title}}</a></li>
+        </ul>
+        <app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+

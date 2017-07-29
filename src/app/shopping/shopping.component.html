@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col s12 mt30 offset-m1 l8 offset-l2">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">购物车</div>
+        <div class="row">
+          <div class="col s6 m3" *ngFor="let item of imgs">
+            <a class="v-thumbnail" href="javascript:void (0);" [ngClass]="{'added':item.state == 'added'}">
+              <img id="img_{{item.id}}" src="../../assets/images/n.jpg" alt="" (click)="addToCart(item)">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

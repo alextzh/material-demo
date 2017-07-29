@@ -1,0 +1,67 @@
+<div class="row fixed-logo">
+  <div class="col s12 user-logo">
+    <a href="#"><img src="../../../assets/images/logo-inverse.png" alt=""></a>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 m7">
+    <div class="flexbox-container" style="padding:100px 20px;">
+      <div class="flexbox-item">
+        <div class="row">
+          <div class="col s12 edge">
+            <h4>注册-Register</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <form [formGroup]="formModel" (submit)="onValidate()" novalidate>
+              <div class="input-field">
+                <i class="material-icons prefix">account_circle</i>
+                <input placeholder="请输入真实姓名" maxlength="20" formControlName="realName" id="realName" type="text" class="validate">
+                <label for="realName" class="active">真实姓名</label>
+                <div class="v-error" [hidden]="formModel.get('realName').valid || formModel.get('realName').pristine">
+                  <div [hidden]="!formModel.hasError('realName','realName')">请输入正确的姓名</div>
+                </div>
+              </div>
+              <div class="input-field">
+                <i class="material-icons prefix">phone_android</i>
+                <input placeholder="请输入身份证号" maxlength="18" formControlName="cardCode" id="cardCode" type="text" class="validate">
+                <label for="cardCode" class="active">身份证号</label>
+                <div class="v-error" [hidden]="formModel.get('cardCode').valid || formModel.get('cardCode').pristine">
+                  <div [hidden]="!formModel.hasError('cardCode','cardCode')">身份证号码格式错误</div>
+                </div>
+              </div>
+              <div class="input-field pl3 left-align">
+                <a [routerLink]="['/user']" class="waves-effect waves-light btn-flat right mb2" id="forgetPwd">暂不实名认证</a>
+              </div>
+              <div class="input-field pl3t2">
+                <button type="submit" class="waves-effect waves-light btn-large login-btn" [disabled]="formModel.invalid" id="registerBtn">完成注册</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m5">
+    <div class="flexbox-container">
+      <div class="flexbox-item">
+        <a [routerLink]="['/user/register']"><img src="../../../assets/images/person-kenny-200.png" alt=""></a>
+        <div class="row">
+          <div class="col s12" style="padding-top: 2rem;">
+            <h5>已经有账户？</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12" style="margin-top:0.3rem;">
+            <a [routerLink]="['/user']" class="waves-effect waves-light btn-large register-btn">立即登录</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

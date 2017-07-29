@@ -1,0 +1,29 @@
+
+.v-font{
+  font-family: "Microsoft JhengHei Light";
+}
+.code{
+  position: absolute;
+  right:0;
+  top:0;
+}
+.p0{
+  padding:0 !important;
+}
+.mb0{
+  margin-bottom:0 !important;
+}
+.mb20{
+  margin-bottom:20px !important;
+}
+.withdraw-btn{
+  width:100%;
+  font-size:1.4rem;
+  font-family: "Microsoft JhengHei";
+  margin-top: 20px;
+}
+@media only screen and (max-width: 601px){
+  .card .card-title {
+    font-size: 16px;
+  }
+}

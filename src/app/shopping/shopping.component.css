@@ -1,0 +1,35 @@
+.card .card-content .card-title{
+  font-family: "Microsoft JhengHei";
+  font-weight: 600;
+  border-left:3px solid #ee6e73;
+  padding-left:15px;
+  margin-bottom:20px;
+}
+.v-thumbnail{
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border .2s ease-in-out;
+}
+a.v-thumbnail.active, a.v-thumbnail:focus, a.v-thumbnail:hover {
+  border-color: #337ab7;
+}
+.v-thumbnail>img{
+  display: block;
+  width:100%;
+  max-width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  vertical-align: middle;
+}
+a.v-thumbnail.added:before{
+  content: "已添加";
+  background-color:rgba(0,0,0,0.3);
+  color: #fff;
+  position: absolute;
+}

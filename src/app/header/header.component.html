@@ -1,0 +1,48 @@
+<header>
+  <nav class="nav-wrapper" style="position: relative;">
+    <div style="float: right;margin-right: 50px;">
+      <a id="v-cart" href="javascript:void (0);" [ngClass]="{'v-show':isShow}">
+        <i class="material-icons">shopping_cart</i>
+        <span class="v-cart">{{total}}</span>
+      </a>
+    </div>
+    <div class="container">
+      <a [routerLink]="['/']" class="brand-logo"><img src="../../assets/images/logo.png" alt="石时代"></a>
+
+
+      <div class="right hide-on-med-and-down">
+        <a class="waves-effect waves-light btn v-login" [routerLink]="['/user']">登录</a>
+        <a class="waves-effect waves-light btn v-register" [routerLink]="['/user/register']">注册</a>
+      </div>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a [routerLink]="['./shopping']" routerLinkActive='nav-active'>购物车</a></li>
+        <li><a [routerLink]="['./projectTransfer']" routerLinkActive='nav-active'>项目转让</a></li>
+        <li><a [routerLink]="['./cashManagement']" routerLinkActive='nav-active'>现金管理</a></li>
+        <li><a [routerLink]="['./order']" routerLinkActive='nav-active'>预约</a></li>
+        <li><a [routerLink]="['./']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive='nav-active'>我的账户</a></li>
+      </ul>
+
+      <a href="javascript:void(0);" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a class="logo-box" [routerLink]="['/']"><img src="../../assets/images/logo.png" alt=""></a></li>
+        <li><a [routerLink]="['./shopping']" routerLinkActive='nav-active'>购物车</a></li>
+        <li><a [routerLink]="['./projectTransfer']" routerLinkActive='nav-active'>项目转让</a></li>
+        <li><a [routerLink]="['./cashManagement']" routerLinkActive='nav-active'>现金管理</a></li>
+        <li><a [routerLink]="['./order']" routerLinkActive='nav-active'>预约</a></li>
+        <li><a [routerLink]="['./']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive='nav-active'>我的账户</a></li>
+        <li class="v-message">
+          <a class="waves-effect waves-light btn v-login" [routerLink]="['/user']">登录</a>
+        </li>
+        <li class="v-message">
+          <a class="waves-effect waves-light btn v-register" [routerLink]="['/user/register']">注册</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+
+
+

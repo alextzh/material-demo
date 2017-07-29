@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <div class="v-title">申请提现</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title mb20">
+          <p class="v-font">可提现金额(元)：<span>9999999</span></p>
+        </div>
+        <div class="row mb0">
+          <div class="col s12 p0">
+            <div class="input-field">
+              <select>
+                <option value="" disabled selected>请选择提现银行卡</option>
+                <option value="1">中国建设银行</option>
+                <option value="2">中国工商银行</option>
+                <option value="3">北京银行</option>
+              </select>
+              <label>银行卡名称</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb0">
+          <div class="col s12 p0">
+            <div class="input-field">
+              <input id="rechargeAmt" type="number" placeholder="请输入提现金额" class="validate">
+              <label for="rechargeAmt" class="active">提现金额</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb0">
+          <div class="col s12 p0">
+            <div class="input-field">
+              <a class="code waves-effect waves-light btn" href="javascript:void (0);">获取</a>
+              <input placeholder="请输入手机验证码" id="phoneVerificationCode" type="number" class="validate">
+              <label for="phoneVerificationCode" class="active">手机验证码</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m4 offset-m4">
+            <a href="javascript:void (0);" class="waves-effect waves-light btn-large withdraw-btn">提现</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<input id="indexFor" type="hidden" namefor="withdraw"/>

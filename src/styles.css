@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+.v-title{
+  font-family: "Microsoft JhengHei";
+  font-size: 24px;
+  font-weight: 600;
+  border-left:3px solid #ee6e73;
+  padding-left:15px;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.mt30{
+  margin-top:30px !important;
+}
+.btn-success{
+  background: #4caf50 !important;
+  margin: 0 10px;
+}
+.btn-danger{
+  background: #f44336 !important;
+  margin: 0 10px;
+}
+.swal2-modal .swal2-title {
+  font-weight:500 !important;
+  margin: 1em !important;
+}
+.v-error{
+  text-align: left;
+  padding:0 50px 15px;
+  margin-top:-15px;
+  color: #f44336;
+  font-size: 12px;
+}
+.nav-active{
+  background: rgba(216, 13, 13, 0.3);
+}
+.center-active{
+  background: rgb(231, 80, 84);
+  color: #fff !important;
+}

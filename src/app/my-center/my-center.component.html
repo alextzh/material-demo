@@ -1,0 +1,78 @@
+
+<div class="row">
+  <div class="col l2 m2 hide-on-med-and-down">
+    <ul class="side-nav fixed center-nav" style="position: relative;">
+      <li class="bold"><a [routerLink]="['./']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive='center-active' class="waves-effect waves-teal">账户中心</a></li>
+      <li class="bold"><a [routerLink]="['./yjggList']" routerLinkActive='center-active' class="waves-effect waves-teal">业绩公告</a></li>
+      <li class="bold"><a [routerLink]="['./lsyjList']" routerLinkActive='center-active' class="waves-effect waves-teal">历史业绩</a></li>
+      <li class="bold"><a [routerLink]="['./jslbList']" routerLinkActive='center-active' class="waves-effect waves-teal">结算列表</a></li>
+      <li class="bold"><a [routerLink]="['./xbggList']" routerLinkActive='center-active' class="waves-effect waves-teal">新标公告</a></li>
+      <li class="bold"><a [routerLink]="['./ptggList']" routerLinkActive='center-active' class="waves-effect waves-teal">平台公告</a></li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+          <li class="bold">
+            <a class="waves-effect waves-teal collapsible-header" (click)="expand = !expand">资金管理 <i class="material-icons" id="extend">{{expand? "expand_more" : "expand_less"}}</i></a>
+            <div class="collapsible-body">
+              <ul class="fund-node">
+                <li><a [routerLink]="['./tradeRecord']" routerLinkActive='center-active' class="waves-effect waves-teal">交易记录</a></li>
+                <li><a [routerLink]="['./recharge']" routerLinkActive='center-active' class="waves-effect waves-teal">填写充值信息</a></li>
+                <li><a [routerLink]="['./withDraw']" routerLinkActive='center-active' class="waves-effect waves-teal">提现</a></li>
+                <li><a [routerLink]="['./bankCard']" routerLinkActive='center-active' class="waves-effect waves-teal">银行卡</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="bold"><a [routerLink]="['./agreementModel']" routerLinkActive='center-active' class="waves-effect waves-teal">合同范本</a></li>
+      <li class="bold"><a [routerLink]="['./bookLoanList']" routerLinkActive='center-active' class="waves-effect waves-teal">预约列表</a></li>
+      <li class="bold"><a [routerLink]="['./dayInvestList']" routerLinkActive='center-active' class="waves-effect waves-teal">我的现金管理</a></li>
+      <li class="bold"><a [routerLink]="['./myTransferList']" routerLinkActive='center-active' class="waves-effect waves-teal">停牌份额</a></li>
+      <li class="bold"><a [routerLink]="['./boughtTransfer']" routerLinkActive='center-active' class="waves-effect waves-teal">停牌购买</a></li>
+      <li class="bold"><a [routerLink]="['./luckDrawList']" routerLinkActive='center-active' class="waves-effect waves-teal">抽奖记录</a></li>
+      <li class="bold"><a [routerLink]="['./myCoupon']" routerLinkActive='center-active' class="waves-effect waves-teal">我的红包</a></li>
+      <li class="bold"><a [routerLink]="['./riskTest']" routerLinkActive='center-active' class="waves-effect waves-teal">风险测评</a></li>
+      <li class="bold"><a [routerLink]="['./accountSafe']" routerLinkActive='center-active' class="waves-effect waves-teal">账户安全</a></li>
+    </ul>
+  </div>
+  <div class="fixed-action-btn horizontal click-to-toggle" id="floatBtn">
+    <a class="btn-floating btn-large red button-collapse pulse" data-activates="centerMenu">
+      <i class="material-icons">menu</i>
+    </a>
+  </div>
+  <ul class="side-nav float-menu" id="centerMenu">
+    <li class="bold"><a [routerLink]="['./']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive='center-active' class="waves-effect waves-teal">账户中心</a></li>
+    <li class="bold"><a [routerLink]="['./yjggList']" routerLinkActive='center-active' class="waves-effect waves-teal">业绩公告</a></li>
+    <li class="bold"><a [routerLink]="['./lsyjList']" routerLinkActive='center-active' class="waves-effect waves-teal">历史业绩</a></li>
+    <li class="bold"><a [routerLink]="['./jslbList']" routerLinkActive='center-active' class="waves-effect waves-teal">结算列表</a></li>
+    <li class="bold"><a [routerLink]="['./xbggList']" routerLinkActive='center-active' class="waves-effect waves-teal">新标公告</a></li>
+    <li class="bold"><a [routerLink]="['./ptggList']" routerLinkActive='center-active' class="waves-effect waves-teal">平台公告</a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+        <li class="bold">
+          <a class="waves-effect waves-teal collapsible-header">资金管理</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a [routerLink]="['./tradeRecord']" routerLinkActive='center-active' class="waves-effect waves-teal">交易记录</a></li>
+              <li><a [routerLink]="['./recharge']" routerLinkActive='center-active' class="waves-effect waves-teal">填写充值信息</a></li>
+              <li><a [routerLink]="['./withDraw']" routerLinkActive='center-active' class="waves-effect waves-teal">提现</a></li>
+              <li><a [routerLink]="['./bankCard']" routerLinkActive='center-active' class="waves-effect waves-teal">银行卡</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a [routerLink]="['./agreementModel']" routerLinkActive='center-active' class="waves-effect waves-teal">合同范本</a></li>
+    <li class="bold"><a [routerLink]="['./bookLoanList']" routerLinkActive='center-active' class="waves-effect waves-teal">预约列表</a></li>
+    <li class="bold"><a [routerLink]="['./dayInvestList']" routerLinkActive='center-active' class="waves-effect waves-teal">我的现金管理</a></li>
+    <li class="bold"><a [routerLink]="['./myTransferList']" routerLinkActive='center-active' class="waves-effect waves-teal">停牌份额</a></li>
+    <li class="bold"><a [routerLink]="['./boughtTransfer']" routerLinkActive='center-active' class="waves-effect waves-teal">停牌购买</a></li>
+    <li class="bold"><a [routerLink]="['./luckDrawList']" routerLinkActive='center-active' class="waves-effect waves-teal">抽奖记录</a></li>
+    <li class="bold"><a [routerLink]="['./myCoupon']" routerLinkActive='center-active' class="waves-effect waves-teal">我的红包</a></li>
+    <li class="bold"><a [routerLink]="['./riskTest']" routerLinkActive='center-active' class="waves-effect waves-teal">风险测评</a></li>
+    <li class="bold"><a [routerLink]="['./accountSafe']" routerLinkActive='center-active' class="waves-effect waves-teal">账户安全</a></li>
+  </ul>
+  <main class="col m10 s12 l10">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+

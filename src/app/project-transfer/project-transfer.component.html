@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col s12 mt30 offset-m1 l8 offset-l2">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">项目转让</div>
+        <div class="row">
+          <div class="col s12">
+            <nav>
+              <div class="nav-wrapper">
+                <form>
+                  <div class="input-field">
+                    <input [formControl]="nameFilter" #myInput id="search" type="search" placeholder="请输入项目名称" required >
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                  </div>
+                </form>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <table class="bordered highlight centered responsive-table">
+              <thead>
+                <tr>
+                  <th>转让时间</th>
+                  <th>项目名称</th>
+                  <th>项目金额</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of pagedItems | filter:'itemName':keyword">
+                  <td>{{item.transferTime}}</td>
+                  <td>{{item.itemName}}</td>
+                  <td>{{item.transferPrice}}</td>
+                  <td>
+                    <a href="javascript:void (0);" class="waves-effect waves-light btn" (click)="purchase(item.itemId)">
+                      <i class="material-icons">shopping_cart</i>
+                      <span style="vertical-align: 4px;">购买</span>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-paginator rows="{{rows}}" totalRecords="{{totalRecords}}" [rowsPerPageOptions]="[3,6,10]" (onPageChange)="setPage($event)"></app-paginator>
