@@ -4,12 +4,12 @@ import {Directive, EventEmitter, Input, OnInit, Output} from '@angular/core';
   selector: '[appIsLast]'
 })
 export class IsLastDirective implements OnInit  {
-  @Input() isLast:boolean;
-  @Output() lastDone:EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Input() isLast: boolean;
+  @Output() lastDone: EventEmitter<boolean> = new EventEmitter<boolean>();
   constructor() { }
-  ngOnInit():void{
-    if (this.isLast){
-      this.lastDone.emit(true)
+  ngOnInit(): void {
+    if (this.isLast) {
+      this.lastDone.emit(true);
     }
   }
 }

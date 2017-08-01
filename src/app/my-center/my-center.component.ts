@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {NoticeService} from "../service/notice.service";
-declare var $:any;
+import {NoticeService} from '../service/notice.service';
+declare const $: any;
 @Component({
   selector: 'app-my-center',
   templateUrl: './my-center.component.html',
   styleUrls: ['./my-center.component.css']
 })
 export class MyCenterComponent implements OnInit {
-  private expand:boolean = true;
-  private isShow:boolean = false;
-  constructor(private noticeService:NoticeService) {
+  private expand: boolean = true;
+  private isShow: boolean = false;
+  constructor(private noticeService: NoticeService) {
     $(document).ready(function () {
       $('.collapsible').collapsible();
       $('.button-collapse').sideNav({
@@ -19,14 +19,10 @@ export class MyCenterComponent implements OnInit {
           draggable: true // Choose whether you can drag to open on touch screens
         }
       );
-
-
-
-    })
+    });
   }
 
   ngOnInit() {
-    this.noticeService.cartEvent.emit(this.isShow)
+    this.noticeService.cartEvent.emit(this.isShow);
   }
-
 }

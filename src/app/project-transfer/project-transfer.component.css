@@ -5,4 +5,8 @@
   padding-left:15px;
   margin-bottom:20px;
 }
+.input-field label{
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
 

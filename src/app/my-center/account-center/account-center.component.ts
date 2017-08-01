@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {TradeRecord, TransferItemService} from "../../service/transfer-item.service";
-import {NoticeService} from "../../service/notice.service";
+import {TradeRecord, TransferItemService} from '../../service/transfer-item.service';
+import {NoticeService} from '../../service/notice.service';
 
 @Component({
   selector: 'app-account-center',
@@ -8,20 +8,20 @@ import {NoticeService} from "../../service/notice.service";
   styleUrls: ['./account-center.component.css']
 })
 export class AccountCenterComponent implements OnInit {
-  private items:TradeRecord[];
-  private isShow:boolean = false;
-  constructor(private transferItemService:TransferItemService,private noticeService:NoticeService) {
+  private items: TradeRecord[];
+  private isShow: boolean = false;
+  constructor(private transferItemService: TransferItemService, private noticeService: NoticeService) {
   }
-  getTradeRecord(){
+  getTradeRecord() {
     this.transferItemService.getTradeRecord()
       .subscribe(
         items => {
-          this.items = items.slice(0,6)
+          this.items = items.slice(0, 6);
         }
-      )
+      );
   }
   ngOnInit() {
     this.getTradeRecord();
-    this.noticeService.cartEvent.emit(this.isShow)
+    this.noticeService.cartEvent.emit(this.isShow);
   }
 }

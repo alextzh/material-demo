@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var $:any;
+declare const $: any;
 @Component({
   selector: 'app-with-draw',
   templateUrl: './with-draw.component.html',

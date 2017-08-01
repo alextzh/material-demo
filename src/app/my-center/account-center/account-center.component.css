@@ -14,4 +14,17 @@
   .card .card-content p.v-plot{
     margin-bottom:30px;
   }
+  .card .v-card{
+    padding: 10px
+  }
+  .row .sm-title{
+    padding: 0
+  }
+  .sm-font{
+    font-size: 16px
+  }
+  .v-btn{
+    font-size: 14px;
+    padding: 0 1rem;
+  }
 }

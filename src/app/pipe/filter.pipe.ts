@@ -6,14 +6,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(items: any[],field:string, keyword?: string): any {
-    if (!field || !keyword){
+  transform(items: any[], field: string, keyword?: string): any {
+    if (!field || !keyword) {
       return items;
     }
-    return items.filter(items => {
-      let itemFieldValue = items[field].toLowerCase();
-      return itemFieldValue.indexOf(keyword.toLowerCase()) >=0;
-    })
+    return items.filter((item) => {
+      const itemFieldValue = item[field].toLowerCase();
+      return itemFieldValue.indexOf(keyword.toLowerCase()) >= 0;
+    });
   }
 
 }

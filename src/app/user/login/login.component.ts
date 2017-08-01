@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,20 +8,20 @@ import {Router} from "@angular/router";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  formModel:FormGroup;
-  constructor(fb:FormBuilder,private router:Router) {
+  formModel: FormGroup;
+  constructor(fb: FormBuilder, private router: Router) {
     this.formModel = fb.group({
-      username:['',[Validators.required,Validators.minLength(6)]],
-      password:['',[Validators.required,Validators.minLength(6)]],
-      checked:['']
-    })
+      username: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      checked: ['']
+    });
   }
 
   ngOnInit() {
   }
-  onLogin(){
-    if (this.formModel.valid){
-      this.router.navigate(['/layout'])
+  onLogin() {
+    if (this.formModel.valid) {
+      this.router.navigate(['/layout']);
     }
   }
 }
