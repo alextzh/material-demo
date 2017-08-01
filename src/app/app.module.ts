@@ -38,17 +38,16 @@ import { RegisterComponent } from './user/register/register.component';
 import { ForgetPwdComponent } from './user/forget-pwd/forget-pwd.component';
 import { LayoutComponent } from './layout/layout.component';
 import { CertificationComponent } from './user/certification/certification.component';
-import {TransferItemService} from "./service/transfer-item.service";
+import { TransferItemService } from './service/transfer-item.service';
 import { PaginatorComponent } from './paginator/paginator.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { ItemListComponent } from './my-center/item-list/item-list.component';
 import { StageListComponent } from './my-center/stage-list/stage-list.component';
-import {NoticeService} from "./service/notice.service";
+import { NoticeService } from './service/notice.service';
 import { AgreementDetailComponent } from './my-center/agreement-detail/agreement-detail.component';
 import { PtggDetailComponent } from './my-center/ptgg-detail/ptgg-detail.component';
 import { XbggDetailComponent } from './my-center/xbgg-detail/xbgg-detail.component';
 import { ValicateCodeComponent } from './valicate-code/valicate-code.component';
-import {Ng2Echarts} from "ng2-echarts";
 import { IsLastDirective } from './directive/is-last.directive';
 import { ShoppingComponent } from './shopping/shopping.component';
 @NgModule({
@@ -94,7 +93,6 @@ import { ShoppingComponent } from './shopping/shopping.component';
     PtggDetailComponent,
     XbggDetailComponent,
     ValicateCodeComponent,
-    Ng2Echarts,
     IsLastDirective,
     ShoppingComponent
   ],
@@ -108,7 +106,7 @@ import { ShoppingComponent } from './shopping/shopping.component';
 
 
   ],
-  providers: [TransferItemService,NoticeService],
+  providers: [TransferItemService, NoticeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
